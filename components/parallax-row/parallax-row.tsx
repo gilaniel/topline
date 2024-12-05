@@ -38,7 +38,7 @@ export function ParallaxRow({
     <div className="parallax h-full">
       <motion.div
         className="scroller flex items-center justify-center"
-        // style={{ x }}
+        style={{ x }}
       >
         {children}
         {children}
