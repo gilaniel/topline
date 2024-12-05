@@ -1,0 +1,7 @@
+.parallax {
+  @apply flex flex-nowrap overflow-hidden whitespace-nowrap;
+}
+
+.parallax .scroller {
+  @apply flex flex-nowrap gap-5 whitespace-nowrap;
+}
