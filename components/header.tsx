@@ -30,7 +30,7 @@ export const Header = () => {
       <div
         className={cn(
           "max-w-[2160px] px-0 md:px-10 xl:px-20 mx-auto transition-all",
-          withShadow && "max-w-[100%] px-0"
+          withShadow && "max-w-[100%] md:px-0 xl:px-0"
         )}
       >
         <div
