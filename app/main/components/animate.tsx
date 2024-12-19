@@ -40,7 +40,9 @@ const rightArrow = (width: number) => {
 };
 
 export const Animate = () => {
-  const [width] = useState(window.innerWidth);
+  const [width] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
   return (
     <section className="w-full overflow-hidden">
