@@ -11,7 +11,7 @@ import { InfluencerItem } from "./influencerItem";
 
 export const Influencers = ({ influencers }: { influencers: Influencer[] }) => {
   return (
-    <section className="w-full mb-10 md:mb-[200px] px-4">
+    <section className="w-full mb-10 md:mb-[200px] pl-4 md:pl-10 xl:pl-20">
       <div className="flex flex-col items-center">
         <h3 className="text-center px-4 md:px-0 mb-10">Наши Инфлюенсеры</h3>
 

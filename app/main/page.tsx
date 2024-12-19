@@ -18,19 +18,27 @@ export default async function Home() {
   const influencers = await getInfluencers();
 
   return (
-    <div className="container">
-      <main className="flex flex-col items-center">
-        <Hero />
-        <About />
-        <Animate />
-        <Instruments instruments={instruments} />
-        <Influencers influencers={influencers} />
-        <Chosen images={images} />
-      </main>
+    <main>
+      <div className="container">
+        <div className="flex flex-col items-center">
+          <Hero />
+          <About />
+          <Animate />
+          <Instruments instruments={instruments} />
+        </div>
+      </div>
+
+      <Influencers influencers={influencers} />
+
+      <div className="container">
+        <div className="flex flex-col items-center">
+          <Chosen images={images} />
+        </div>
+      </div>
 
       <Suspense>
         <ContactsDialog />
       </Suspense>
-    </div>
+    </main>
   );
 }
