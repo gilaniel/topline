@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { delay, motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const onscreen = ({ side }: { side: string }) => {
   return {
@@ -39,7 +40,7 @@ const rightArrow = (width: number) => {
 };
 
 export const Animate = () => {
-  const width = typeof window !== "undefined" ? window.innerWidth : 0;
+  const [width] = useState(window.innerWidth);
 
   return (
     <section className="w-full overflow-hidden">

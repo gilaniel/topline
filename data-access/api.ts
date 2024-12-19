@@ -1,4 +1,5 @@
 import { images } from "./chosen";
+import { influencers } from "./influencers";
 import { instruments } from "./instruments";
 
 export async function getChosenImages() {
@@ -7,4 +8,8 @@ export async function getChosenImages() {
 
 export async function getInstruments() {
   return Promise.resolve(instruments);
+}
+
+export async function getInfluencers() {
+  return Promise.resolve(influencers);
 }

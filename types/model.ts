@@ -9,3 +9,18 @@ export type Instrument = {
   desc: string;
   desc_list?: string[];
 };
+
+export type Influencer = {
+  id: number;
+  img: string;
+  title: string;
+  author: string;
+  genre: string;
+  desc: string;
+  socials: {
+    name: string;
+    subs: string;
+    views: string;
+    comments: string;
+  }[];
+};

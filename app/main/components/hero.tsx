@@ -5,7 +5,7 @@ import { HeroContacts } from "./heroContacts";
 
 export const Hero = () => {
   return (
-    <section className="bg-[--grey] pt-0 pb-10 md:py-10  w-full rounded-b-[40px] mb-10 md:mb-[200px]">
+    <section className="bg-[--grey] pt-0 pb-10 md:py-10 mt-[109px] w-full rounded-b-[40px] mb-10 md:mb-[200px]">
       <div className="mb-[72px] md:mb-[88px] h-[240px]">
         <ParallaxRow>
           <div className="flex items-center justify-center relative w-[426px] h-[240px]">

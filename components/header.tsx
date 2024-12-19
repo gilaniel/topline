@@ -13,8 +13,6 @@ export const Header = () => {
     setShadow(scrollY > 570);
   };
 
-  console.log(withShadow);
-
   useEffect(() => {
     switchHeader();
 
@@ -26,7 +24,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-10">
+    <header className="fixed top-0 z-10 w-full">
       <div
         className={cn(
           "max-w-[2160px] px-0 md:px-10 xl:px-20 mx-auto transition-all",

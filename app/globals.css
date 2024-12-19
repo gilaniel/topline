@@ -70,6 +70,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -108,4 +109,66 @@ h6 {
 
 body[data-scroll-locked] {
   margin-right: 0 !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.inf-swiper .swiper-wrapper {
+  align-items: stretch;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative !important;
+  width: auto !important;
+  height: unset!important;
+}
+
+.swiper-pagination {
+  top: auto!important;
+  bottom: 0!important;
+}
+
+.inf-swiper .swiper-pagination-bullet {
+  @apply w-5 h-5 relative bg-transparent transition-colors;
+  margin: 0 4px!important;
+  opacity: 1!important;
+}
+
+.swiper-pagination-bullet:hover {
+  @apply bg-[#b9965333]
+}
+
+.swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background: var(--text-color-secondary);
+  transition: background .3s ease;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  @apply bg-[--gold]
+}
+
+.selected-social {
+  @apply bg-[#1d1d1d] transition-colors cursor-default;
+}
+
+.inf-text {
+  @apply text-[14px] leading-[143%] md:text-[20px] md:leading-[150%] font-[400] capitalize;
+  font-family: 'Inter';
 }
