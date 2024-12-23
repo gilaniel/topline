@@ -168,7 +168,8 @@ body[data-scroll-locked] {
 }
 
 .inf-text {
-  @apply text-[14px] leading-[143%] md:text-[20px] md:leading-[150%] font-[400] capitalize;
+  @apply text-[14px] leading-[143%] md:text-[20px] md:leading-[150%] font-[400];
+  text-transform: initial;
   font-family: "Inter";
 }
 
