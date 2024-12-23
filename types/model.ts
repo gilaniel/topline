@@ -12,7 +12,7 @@ export type Instrument = {
 
 export type Influencer = {
   id: number;
-  img: string;
+  img?: string;
   title: string;
   author: string;
   genre: string;
@@ -21,6 +21,6 @@ export type Influencer = {
     name: string;
     subs: string;
     views: string;
-    comments: string;
+    // comments: string;
   }[];
 };
