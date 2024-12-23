@@ -185,3 +185,11 @@ body[data-scroll-locked] {
   @apply uppercase font-[700] text-[16px];
   font-family: "Unbounded";
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #2b2b2b inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
