@@ -17,7 +17,6 @@ export const Influencers = ({ influencers }: { influencers: Influencer[] }) => {
 
         <Swiper
           modules={[Pagination]}
-          loop
           pagination={{
             clickable: true,
           }}
@@ -27,7 +26,7 @@ export const Influencers = ({ influencers }: { influencers: Influencer[] }) => {
           onSwiper={(swiper) => console.log(swiper)}
           className="inf-swiper"
         >
-          {influencers.concat(influencers).map((item) => (
+          {influencers.map((item) => (
             <SwiperSlide key={item.id + Math.random()}>
               <InfluencerItem item={item} />
             </SwiperSlide>

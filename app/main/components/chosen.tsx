@@ -1,5 +1,5 @@
+import { FadeImg } from "@/components/image";
 import { ChosenImg } from "@/types/model";
-import Image from "next/image";
 
 export const Chosen = ({ images }: { images: ChosenImg[] }) => {
   return (
@@ -13,7 +13,7 @@ export const Chosen = ({ images }: { images: ChosenImg[] }) => {
               key={item.id}
               className="flex items-center justify-center relative w-[140px] h-[80px] lg:w-[180px] lg:h-[100px]"
             >
-              <Image
+              <FadeImg
                 src={item.url}
                 alt=""
                 fill

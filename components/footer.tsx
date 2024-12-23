@@ -1,13 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Form } from "./form";
+import { FadeImg } from "./image";
 
 export const Footer = () => {
   return (
     <footer className="bg-[--grey] py-10 ronded-t-[40px] px-4 md:px-0">
       <div className="container">
         <Link href="/">
-          <Image
+          <FadeImg
             src="/logo.svg"
             alt=""
             width={294}
@@ -20,9 +20,18 @@ export const Footer = () => {
 
         <Form />
 
-        <span className="font-['Inter'] text-[14px] text-[--text-color-secondary] capitalize font-[400]">
-          {new Date().getFullYear()} ООО «Топлайн Медиа». Все права защищены
-        </span>
+        <div className="flex flex-wrap gap-5">
+          <Link
+            href="/privacy_policy"
+            className="capitalize text-[12px] font-[400]"
+            style={{ fontFamily: "var(--font-family)" }}
+          >
+            Политика обработки персональных данных
+          </Link>
+          <span className="font-['Inter'] text-[14px] text-[--text-color-secondary] capitalize font-[400]">
+            {new Date().getFullYear()} ООО «Топлайн Медиа». Все права защищены
+          </span>
+        </div>
       </div>
     </footer>
   );

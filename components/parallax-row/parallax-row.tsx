@@ -21,8 +21,8 @@ interface ParallaxRowProps {
 
 export function ParallaxRow({
   children,
-  baseVelocity = 1.5,
-  rightX = -43.5,
+  baseVelocity = 0.5,
+  rightX = -43.4,
 }: ParallaxRowProps) {
   const baseX = useMotionValue(0);
   const x = useTransform(baseX, (v) => `${wrap(-10, rightX, v)}%`);

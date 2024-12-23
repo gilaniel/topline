@@ -1,8 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { FadeImg } from "./image";
 
 export const Header = () => {
   const [withShadow, setShadow] = useState(false);
@@ -37,7 +38,9 @@ export const Header = () => {
             withShadow && "rounded-b-[40px] header-shadow"
           )}
         >
-          <Image src="/logo.svg" alt="Topline" width={294} height={30} />
+          <Link href="/">
+            <FadeImg src="/logo.svg" alt="Topline" width={294} height={30} />
+          </Link>
         </div>
       </div>
     </header>

@@ -122,33 +122,32 @@ body[data-scroll-locked] {
 }
 
 .swiper-slide {
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative !important;
   width: auto !important;
-  height: unset!important;
+  height: unset !important;
 }
 
 .swiper-pagination {
-  top: auto!important;
-  bottom: 0!important;
+  top: auto !important;
+  bottom: 0 !important;
 }
 
 .inf-swiper .swiper-pagination-bullet {
   @apply w-5 h-5 relative bg-transparent transition-colors;
-  margin: 0 4px!important;
-  opacity: 1!important;
+  margin: 0 4px !important;
+  opacity: 1 !important;
 }
 
 .swiper-pagination-bullet:hover {
-  @apply bg-[#b9965333]
+  @apply bg-[#b9965333];
 }
 
 .swiper-pagination-bullet::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -157,11 +156,11 @@ body[data-scroll-locked] {
   height: 8px;
   width: 8px;
   background: var(--text-color-secondary);
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
-  @apply bg-[--gold]
+  @apply bg-[--gold];
 }
 
 .selected-social {
@@ -170,5 +169,18 @@ body[data-scroll-locked] {
 
 .inf-text {
   @apply text-[14px] leading-[143%] md:text-[20px] md:leading-[150%] font-[400] capitalize;
-  font-family: 'Inter';
+  font-family: "Inter";
+}
+
+.privacy a {
+  @apply text-[--gold] transition-colors;
+}
+
+.privacy a:hover {
+  @apply text-[--gold-hover];
+}
+
+.privacy .subtitle {
+  @apply uppercase font-[700] text-[16px];
+  font-family: "Unbounded";
 }

@@ -1,53 +1,27 @@
 import ParallaxRow from "@/components/parallax-row/parallax-row";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { HeroContacts } from "./heroContacts";
+import { FadeImg } from "@/components/image";
 
 export const Hero = () => {
   return (
     <section className="bg-[--grey] pt-0 pb-10 md:py-10 mt-[109px] w-full rounded-b-[40px] mb-10 md:mb-[200px]">
       <div className="mb-[72px] md:mb-[88px] h-[240px]">
         <ParallaxRow>
-          <div className="flex items-center justify-center relative w-[426px] h-[240px]">
-            <Image
-              src="/carousel/1.png"
-              alt="Topline"
-              sizes="100%"
-              fill
-              className="object-contain"
-              quality={100}
-            />
-          </div>
-          <div className="flex items-center justify-center relative w-[426px] h-[240px]">
-            <Image
-              src="/carousel/2.png"
-              alt="Topline"
-              sizes="100%"
-              fill
-              className="object-contain"
-              quality={100}
-            />
-          </div>
-          <div className="flex items-center justify-center relative w-[426px] h-[240px]">
-            <Image
-              src="/carousel/3.png"
-              alt="Topline"
-              sizes="100%"
-              fill
-              className="object-contain"
-              quality={100}
-            />
-          </div>
-          <div className="flex items-center justify-center relative w-[426px] h-[240px]">
-            <Image
-              src="/carousel/4.png"
-              alt="Topline"
-              sizes="100%"
-              fill
-              className="object-contain"
-              quality={100}
-            />
-          </div>
+          {Array.from({ length: 14 }).map((_, i) => (
+            <div
+              className="flex items-center justify-center relative w-[426px] h-[240px] rounded-[22px] overflow-hidden"
+              key={i}
+            >
+              <FadeImg
+                src={`/carousel/${i + 1}.jpg`}
+                alt="Topline"
+                sizes="100%"
+                fill
+                className="object-contain"
+                quality={100}
+              />
+            </div>
+          ))}
         </ParallaxRow>
       </div>
 
