@@ -194,3 +194,60 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   caret-color: white;
 }
+
+.container-confirm input {
+  display: none;
+}
+
+.container-confirm {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #2196f300;
+  border-radius: 4px;
+  transition: all 0.25s;
+}
+
+.container-confirm input:checked ~ .checkmark {
+  background-color: var(--gold);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  border: 1px solid white;
+  left: 0;
+  top: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  transition: all 0.25s, border-width 0.1s;
+}
+
+.checkmark.invalid:after {
+  @apply border-red-500;
+}
+
+/* Show the checkmark when checked */
+.container-confirm input:checked ~ .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 0.25em;
+  height: 0.5em;
+  border-color: #fff0 white white #fff0;
+  border-width: 0 0.15em 0.15em 0;
+  border-radius: 4px;
+  transform: rotate(45deg);
+}

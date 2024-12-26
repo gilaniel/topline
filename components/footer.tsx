@@ -12,7 +12,7 @@ export const Footer = () => {
             alt=""
             width={294}
             height={30}
-            className="mb-[100px] md:mb-[200px]"
+            className="mb-[100px] lg:mb-[200px]"
           />
         </Link>
 
@@ -23,8 +23,11 @@ export const Footer = () => {
         <div className="flex flex-wrap gap-5">
           <Link
             href="/privacy_policy"
-            className="capitalize text-[12px] font-[400]"
-            style={{ fontFamily: "var(--font-family)" }}
+            className="text-[12px] font-[400]"
+            style={{
+              fontFamily: "var(--font-family)",
+              textTransform: "initial",
+            }}
           >
             Политика обработки персональных данных
           </Link>
